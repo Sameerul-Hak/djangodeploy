@@ -15,5 +15,14 @@
   <h2>yepdi yo deploye pannitan </h2>
   <img width="300px" height="300px"  src="{% static 'dev/sameer.jpg' %}">
         
+<div>
+  {% for i in posts %}
+  
+  <a href="{% url 'post' i.id %}"><h1>{{i.title}}</h1>
+    {{i.content}}
+    <hr/></a>
+  {% endfor %}
+</div>
+
     </body>
 </html>
